@@ -20,6 +20,9 @@ export const profile = {
   resumePdf: `${import.meta.env.BASE_URL}Jadd_Akkad_Resume_2026.pdf`,
 }
 
+// A project's `image` is a screenshot in public/screenshots/, pointed at through
+// import.meta.env.BASE_URL so it still loads when the site is served from a
+// sub-path. Without one, a cover is drawn on a canvas instead.
 export const projects = [
   {
     slug: 'hush',
@@ -38,7 +41,7 @@ export const projects = [
     stack: ['React 19', 'Node.js', 'Express', 'Socket.IO', 'MongoDB', 'Zustand', 'Clerk', 'ImageKit', 'Docker'],
     live: '',
     source: 'https://github.com/Jaddboi/Hush',
-    image: '',
+    image: `${import.meta.env.BASE_URL}screenshots/hush.webp`,
   },
   {
     slug: 'portfolio',
@@ -57,7 +60,7 @@ export const projects = [
     stack: ['React 19', 'Vite', 'JavaScript', 'CSS', 'Canvas', 'SVG'],
     live: 'https://jaddboi.com',
     source: 'https://github.com/Jaddboi/jadd-portfolio',
-    image: '',
+    image: `${import.meta.env.BASE_URL}screenshots/portfolio.webp`,
   },
 ]
 
