@@ -22,7 +22,7 @@ export const profile = {
 
 // A project's `image` is a screenshot in public/screenshots/, pointed at through
 // import.meta.env.BASE_URL so it still loads when the site is served from a
-// sub-path. Without one, a cover is drawn on a canvas instead.
+// sub-path. A project without one simply has no picture in its folder.
 export const projects = [
   {
     slug: 'hush',
@@ -49,7 +49,7 @@ export const projects = [
     tagline: 'The desktop you are looking at, built in React',
     year: 2026,
     description:
-      'A portfolio that behaves like a Linux desktop. Windows drag, resize, minimise and stack; a dock launches apps; and the Files app, Terminal, Text Editor, Image Viewer and Document Viewer all read from one pretend filesystem built out of a single content file. The wallpaper and the project covers are drawn in the browser, and every icon is SVG, so the site ships without a single image file.',
+      'A portfolio that behaves like a Linux desktop. Windows drag, resize, minimise and stack; a dock launches apps; and the Files app, Terminal, Text Editor, Image Viewer and Document Viewer all read from one pretend filesystem built out of a single content file. The wallpaper is drawn in the browser from seeded noise, and every icon is SVG, so the only images the site ships are the project screenshots.',
     highlights: [
       'A window manager in one reducer: focus, stacking, minimise, maximise, drag and resize',
       'A terminal with 18 commands, tab completion, command history and aliases',
