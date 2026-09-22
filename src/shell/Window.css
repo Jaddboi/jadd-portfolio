@@ -1,0 +1,78 @@
+.win {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: var(--win);
+  color: var(--text);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px var(--win-outline), 0 2px 5px rgba(0, 0, 0, 0.14), 0 10px 26px rgba(0, 0, 0, 0.22);
+  animation: win-in 0.2s cubic-bezier(0.2, 0.9, 0.3, 1);
+  transition: opacity 0.2s ease, transform 0.22s ease, visibility 0s;
+  outline: none;
+  user-select: text;
+}
+
+.win.focused {
+  box-shadow: 0 0 0 1px var(--win-outline), 0 4px 10px rgba(0, 0, 0, 0.2), 0 22px 56px rgba(0, 0, 0, 0.38);
+}
+
+.win.max {
+  inset: 0 0 0 var(--dock-reserve);
+  border-radius: 0;
+}
+
+/* Minimised: shrink away, then be hidden. The delay on `visibility` lets the
+   animation finish before the window stops being drawn at all. */
+.win.min {
+  opacity: 0;
+  transform: translateX(-30%) scale(0.4);
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.22s ease, visibility 0s 0.22s;
+}
+
+.win.closing {
+  animation: win-out 0.15s ease-in forwards;
+  pointer-events: none;
+}
+
+.resize-grip {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 18px;
+  height: 18px;
+  cursor: nwse-resize;
+  touch-action: none;
+}
+
+@keyframes win-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}
+
+@keyframes win-out {
+  to {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}
+
+@media (max-width: 720px) {
+  .win {
+    inset: 0 0 72px 0;
+    border-radius: 0 0 16px 16px;
+  }
+
+  .win.max {
+    inset: 0 0 72px 0;
+  }
+
+  .win.min {
+    transform: translateY(40%) scale(0.6);
+  }
+}

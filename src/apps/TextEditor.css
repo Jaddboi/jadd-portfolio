@@ -1,0 +1,50 @@
+.editor {
+  flex: 1;
+  overflow: auto;
+  padding: 14px 0 24px;
+  background: var(--view);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.65;
+  outline: none;
+}
+
+/* Line numbers are drawn by CSS, counting the lines themselves. */
+.editor ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: line;
+}
+
+.editor li {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  padding-right: 24px;
+  counter-increment: line;
+}
+
+.editor li::before {
+  content: counter(line);
+  padding-right: 18px;
+  text-align: right;
+  color: var(--text-dim);
+  opacity: 0.55;
+  font-size: 12.5px;
+  user-select: none;
+}
+
+.editor li > span {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.editor .md-h1 > span {
+  color: var(--accent-text);
+  font-weight: 700;
+}
+
+.editor .md-h2 > span {
+  color: var(--heading-2);
+  font-weight: 700;
+}

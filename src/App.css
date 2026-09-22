@@ -1,0 +1,15 @@
+.shell {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* Windows stack inside this box: `isolation: isolate` keeps even the highest
+   one below the dock and the top bar. */
+.desktop-area {
+  position: absolute;
+  inset: var(--topbar-h) 0 0 0;
+
+  isolation: isolate;
+}

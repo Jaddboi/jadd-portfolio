@@ -1,0 +1,114 @@
+.docs {
+  flex: 1;
+  overflow: auto;
+  padding: 28px 24px;
+  background: var(--viewer-bg);
+  outline: none;
+}
+
+.paper {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 52px 58px;
+  background: #fff;
+  color: #1d1f21;
+  font-size: 13.5px;
+  line-height: 1.55;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 10px 30px rgba(0, 0, 0, 0.16);
+}
+
+.paper a {
+  color: #1c6a7c;
+}
+
+.paper h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  font-stretch: 87.5%;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+.paper-contact {
+  margin: 6px 0 18px;
+  font-size: 12.5px;
+  color: #50565a;
+}
+
+.paper h2 {
+  margin: 24px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #dce3e5;
+  color: #1c6a7c;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.paper-entry + .paper-entry {
+  margin-top: 14px;
+}
+
+.paper-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.paper-row > :first-child {
+  min-width: 0;
+}
+
+.paper-row > span {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: #666d71;
+}
+
+.paper-sub {
+  display: block;
+}
+
+.paper-note {
+  margin: 4px 0 0;
+}
+
+.paper ul {
+  margin: 6px 0 0;
+  padding-left: 18px;
+}
+
+.paper-skills {
+  margin: 0;
+}
+
+.paper-skills div + div {
+  margin-top: 2px;
+}
+
+.paper-skills dt {
+  display: inline;
+  font-weight: 600;
+}
+
+.paper-skills dt::after {
+  content: ': ';
+}
+
+.paper-skills dd {
+  display: inline;
+  margin: 0;
+}
+
+@media (max-width: 720px) {
+  .paper {
+    padding: 28px 22px;
+  }
+
+  .docs {
+    padding: 16px 10px;
+  }
+}

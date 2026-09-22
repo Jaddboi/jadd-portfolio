@@ -1,0 +1,143 @@
+.contacts {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 24px;
+  text-align: center;
+}
+
+.contacts > * {
+  flex-shrink: 0;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: linear-gradient(#5bb6c9, #2b7084);
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.contacts h2 {
+  margin: 14px 0 0;
+  font-size: 22px;
+}
+
+.contact-role {
+  margin: 2px 0 0;
+  color: var(--text-dim);
+}
+
+.contact-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin: 14px 0 22px;
+  padding: 6px 13px;
+  border-radius: 999px;
+  background: var(--btn);
+  font-size: 13px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  flex: none;
+  border-radius: 50%;
+  background: #57c26e;
+  box-shadow: 0 0 0 3px rgba(87, 194, 110, 0.25);
+}
+
+.boxed-list {
+  width: 100%;
+  margin: 0 0 22px;
+  padding: 0;
+  list-style: none;
+  border-radius: 12px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  text-align: left;
+  overflow: hidden;
+}
+
+.boxed-list li {
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 9px 14px;
+}
+
+.boxed-list li + li {
+  border-top: 1px solid var(--line);
+}
+
+.boxed-list li > div {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.boxed-list a {
+  overflow: hidden;
+  color: var(--text);
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.boxed-list a:hover {
+  text-decoration: underline;
+}
+
+.row-label {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.row-trail {
+  color: var(--text-dim);
+}
+
+.icon-btn {
+  width: 34px;
+  height: 34px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: var(--btn);
+}
+
+.icon-btn:hover {
+  background: var(--btn-hover);
+}
+
+.pill-btn {
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 26px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.pill-btn.suggested {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.pill-btn.suggested:hover {
+  filter: brightness(1.07);
+}

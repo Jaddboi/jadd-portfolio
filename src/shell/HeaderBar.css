@@ -1,0 +1,109 @@
+.headerbar {
+  flex: none;
+  height: 46px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 6px;
+  padding: 0 7px;
+  background: var(--header);
+  border-bottom: 1px solid var(--line);
+  user-select: none;
+  touch-action: none;
+}
+
+.win:not(.focused) .headerbar {
+  color: var(--text-dim);
+}
+
+.hb-start {
+  justify-self: start;
+  display: flex;
+  gap: 6px;
+}
+
+.hb-end {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hb-title {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.2;
+}
+
+.hb-title-text {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.hb-subtitle {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.hb-btn {
+  height: 34px;
+  min-width: 34px;
+  display: grid;
+  place-items: center;
+  padding: 0 8px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+}
+
+.hb-btn:hover:not(:disabled) {
+  background: var(--hover);
+}
+
+.hb-btn:disabled {
+  opacity: 0.35;
+}
+
+.linked {
+  display: flex;
+  gap: 2px;
+}
+
+.win-controls {
+  display: flex;
+  gap: 10px;
+  margin-left: 6px;
+  padding-right: 3px;
+}
+
+.wc {
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--btn);
+}
+
+.wc svg {
+  width: 14px;
+  height: 14px;
+  stroke-width: 1.8;
+}
+
+.wc:hover {
+  background: var(--btn-hover);
+}
+
+.wc-close:hover {
+  background: var(--accent);
+  color: var(--on-accent);
+}

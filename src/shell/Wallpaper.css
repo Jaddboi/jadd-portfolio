@@ -1,0 +1,11 @@
+.wallpaper {
+  position: absolute;
+  inset: 0;
+  background: var(--wp-bg);
+}
+
+.wallpaper canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

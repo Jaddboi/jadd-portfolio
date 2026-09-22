@@ -1,0 +1,166 @@
+.app-terminal {
+  background: var(--term-bg);
+}
+
+.app-terminal .headerbar {
+  background: var(--term-header);
+  color: var(--term-fg);
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+
+.win.app-terminal:not(.focused) .headerbar {
+  color: var(--t-dim);
+}
+
+.app-terminal .wc {
+  background: rgba(255, 255, 255, 0.09);
+  color: var(--term-fg);
+}
+
+.app-terminal .wc:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.app-terminal .wc-close:hover {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.terminal {
+  flex: 1;
+  overflow: auto;
+  padding: 10px 14px 16px;
+  background: var(--term-bg);
+  color: var(--term-fg);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.5;
+  cursor: text;
+}
+
+.terminal ::selection {
+  background: rgba(242, 169, 59, 0.35);
+}
+
+.t-line {
+  min-height: 1.5em;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.t-input-row {
+  display: flex;
+}
+
+.t-prompt {
+  flex: none;
+}
+
+.t-input {
+  flex: 1;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  caret-color: var(--accent);
+}
+
+.t-user {
+  color: var(--t-user);
+  font-weight: 700;
+}
+
+.t-path {
+  color: var(--t-path);
+  font-weight: 700;
+}
+
+.t-key {
+  color: var(--t-key);
+  font-weight: 700;
+}
+
+.t-cmd {
+  color: var(--t-cmd);
+}
+
+.t-dim {
+  color: var(--t-dim);
+}
+
+.t-ok {
+  color: var(--t-user);
+}
+
+.t-dir {
+  color: var(--t-path);
+  font-weight: 700;
+}
+
+.t-exec {
+  color: var(--t-user);
+}
+
+.terminal a {
+  color: var(--t-path);
+  text-underline-offset: 2px;
+}
+
+.t-pre {
+  margin: 0;
+  font: inherit;
+  white-space: pre-wrap;
+}
+
+.t-table {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 1px 24px;
+}
+
+.t-ls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 22px;
+}
+
+.t-projects > div + div {
+  margin-top: 6px;
+}
+
+.t-neofetch {
+  display: flex;
+  gap: 30px;
+  padding: 6px 0 4px;
+}
+
+.t-tux {
+  margin: 0;
+  color: var(--accent);
+  font: inherit;
+  line-height: 1.35;
+}
+
+.t-swatches {
+  display: flex;
+  margin-top: 10px;
+}
+
+.t-swatches span {
+  width: 24px;
+  height: 14px;
+}
+
+@media (max-width: 720px) {
+  .t-neofetch {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .terminal {
+    font-size: 13px;
+  }
+}
