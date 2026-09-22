@@ -18,10 +18,14 @@ function readme(p) {
   return lines.join('\n')
 }
 
+// A project's picture keeps the extension of its real screenshot, so the name
+// in Files matches the file that is shown.
+const picture = (p) => `${p.slug}${p.image ? p.image.slice(p.image.lastIndexOf('.')) : '.png'}`
+
 function projectDir(p) {
   const children = [
     file('README.md', 'text', { content: readme(p) }),
-    file(`${p.slug}.png`, 'image', { project: p }),
+    file(picture(p), 'image', { project: p }),
   ]
   if (p.live) children.push(file('live-demo.desktop', 'link', { label: 'Live demo', url: p.live }))
   if (p.source) children.push(file('source-code.desktop', 'link', { label: 'Source code', url: p.source }))
@@ -67,7 +71,7 @@ const root = dir('/', [
         file('resume.pdf', 'pdf'),
         file('skills.txt', 'text', { content: skillsText }),
       ]),
-      dir('Pictures', projects.map((p) => file(`${p.slug}.png`, 'image', { project: p }))),
+      dir('Pictures', projects.map((p) => file(picture(p), 'image', { project: p }))),
     ]),
   ]),
 ])
