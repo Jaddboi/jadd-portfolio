@@ -62,6 +62,25 @@ export const projects = [
     source: 'https://github.com/Jaddboi/jadd-portfolio',
     image: `${import.meta.env.BASE_URL}screenshots/portfolio.webp`,
   },
+  {
+    slug: 'gambot',
+    name: 'Gambot',
+    tagline: 'A Discord bot for the UofT Marvel Rivals community',
+    year: 2026,
+    description:
+      'A Discord bot that brings Marvel Rivals player stats into the server. Slash commands look up a player and reply with paginated embeds: career overview, combat, impact and hero proficiency, plus recent matches with a full scoreboard for both teams. Season and mode filters are validated against the API before any lookup, and fetched pages are reused instead of re-requested, so browsing a result costs no extra API credits.',
+    highlights: [
+      '/stats with season and mode filters, across four pages of career data',
+      '/history with a text scoreboard per team: K/D/A, damage, healing and accuracy',
+      'Paginated embeds that only their invoker can control, expiring after two minutes',
+      'Caching, cooldowns and rate-limit handling around a credit-metered API',
+      'Missing data shown as unavailable rather than zero, with 13 test files covering it',
+    ],
+    stack: ['Node.js', 'discord.js', 'JavaScript', 'RivalsIsland API'],
+    live: '',
+    source: 'https://github.com/Jaddboi/Gambot',
+    image: '',
+  },
 ]
 
 export const skills = [
