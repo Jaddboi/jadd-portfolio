@@ -188,7 +188,7 @@ export const resume = {
       role: 'Fullstack Developer Intern',
       dates: 'Jan. 2026 – Apr. 2026',
       points: [
-        '**Led development of the admin dashboard** for a **Next.js/React.js** application.',
+        '**Led development of the admin dashboard** for a **Next.js/React.js** application using **TypeScript**.',
         'Built **user and session management** using **FastAPI** across overview and administration views.',
         'Added **account and session lifecycle controls** for deactivation, reactivation, deletion, editing, and cancellation.',
         'Implemented **filtering and pagination** for account and session records.',
