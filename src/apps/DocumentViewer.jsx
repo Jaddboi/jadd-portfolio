@@ -90,6 +90,12 @@ export function DocumentViewer() {
                 <dd>{s.items.join(', ')}</dd>
               </div>
             ))}
+            {resume.hobbies && (
+              <div>
+                <dt>Hobbies</dt>
+                <dd>{resume.hobbies}</dd>
+              </div>
+            )}
           </dl>
         </article>
       </div>

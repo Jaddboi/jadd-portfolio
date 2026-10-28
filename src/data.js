@@ -86,7 +86,7 @@ export const projects = [
 export const skills = [
   {
     category: 'Languages',
-    items: ['Python', 'Java', 'C', 'SQL', 'JavaScript', 'TypeScript', 'HTML/CSS', 'Bash', 'R', 'RISC-V Assembly'],
+    items: ['Python', 'Java', 'C', 'C#', 'SQL', 'JavaScript', 'TypeScript', 'HTML/CSS', 'Bash', 'R'],
   },
   {
     category: 'Frameworks & Libraries',
@@ -160,6 +160,8 @@ export const hobbies = [
 // Mirrors Jadd_Akkad_Resume_2026.pdf. Words in **double asterisks** are shown
 // bold, as on the PDF.
 export const resume = {
+  hobbies:
+    'Player and coach on the UofT Marvel Rivals main team (backline in-game leader); former professional Brawlhalla player (ranked #2 in Asia); basketball, rock climbing, chess, violin, and more.',
   education: [
     {
       school: 'University of Toronto',
